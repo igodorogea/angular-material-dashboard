@@ -1,0 +1,3 @@
+/** @ngInject */
+export function config() {
+}
