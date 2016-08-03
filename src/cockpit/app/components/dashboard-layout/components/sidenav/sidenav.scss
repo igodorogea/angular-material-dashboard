@@ -15,6 +15,14 @@ dl-sidenav {
   }
 }
 
+dl-sidenav-menu dl-sidenav-menu {
+  padding-left: 16px;
+}
+
+md-list-item {
+  border-bottom: 1px solid #ddd;
+}
+
 md-list-item > div.md-primary > md-icon:not(.md-avatar-icon),
 md-list-item > div.md-secondary > md-icon:not(.md-avatar-icon),
 md-list-item > md-icon:first-child:not(.md-avatar-icon),

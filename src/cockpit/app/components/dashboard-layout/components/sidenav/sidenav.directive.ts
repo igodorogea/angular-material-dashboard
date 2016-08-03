@@ -1,4 +1,4 @@
-import { IDlStateConfig, IDlSidenavService } from './sidenav.service';
+import { INode, IDlSidenavService } from './sidenav.service';
 
 /** @ngInject */
 export function dlSidenavMenu(): angular.IDirective {
@@ -10,7 +10,7 @@ export function dlSidenavMenu(): angular.IDirective {
     },
     template: `
         <div ng-repeat="state in states">
-            <md-list-item ui-sref="{{state.urlState}}" ui-sref-active="active">
+            <md-list-item ui-sref="{{state.urlState}}" ui-sref-active="active" ng-if="!state.hiddenInMenu">
                 <md-icon>{{state.icon}}</md-icon>
                 <span flex>{{state.label}}</span>
             </md-list-item>
@@ -40,9 +40,10 @@ export function dlSidenav(): angular.IDirective {
 
 /** @ngInject */
 export class SidenavController {
-  public states: IDlStateConfig[];
+  public states: INode[];
 
-  constructor(DlSidenavService: IDlSidenavService) {
-    this.states = DlSidenavService.getStates();
+  constructor(DlSidenavService: IDlSidenavService, $state: angular.ui.IStateService) {
+    this.states = DlSidenavService.getNodes();
+    console.log($state.get());
   }
 }

@@ -11,25 +11,60 @@ export function routerConfig($stateProvider: angular.ui.IStateProvider, DlSidena
 
   let statesConfig = [
     {
-      label: 'Dashboard',
-      name: 'dashboard',
-      icon: 'home'
+      label: 'Resource',
+      name: 'resource',
+      isResource: true
     },
     {
-      label: 'Account',
-      name: 'account',
-      icon: 'face',
+      label: 'Parent 1',
+      name: 'parent1',
       children: [
         {
-          label: 'Personal data',
-          name: 'personal'
+          label: 'Child 1',
+          name: 'child1'
+        },
+        {
+          label: 'Child 2',
+          name: 'child2',
+          children: [
+            {
+              label: 'Grandchild 1',
+              name: 'grandchild1'
+            },
+            {
+              label: 'Grandchild 2',
+              name: 'grandchild2',
+              hiddenInMenu: true
+            }
+          ]
+        },
+        {
+          label: 'Child 3',
+          name: 'child3'
         }
       ]
     },
     {
-      label: 'Notification',
-      name: 'notification',
-      icon: ''
+      label: 'Resource parent',
+      name: 'resourceparent',
+      isResource: true,
+      children: [
+        {
+          label: 'Child 1',
+          name: 'child1'
+        }
+      ]
+    },
+    {
+      label: 'Resource custom',
+      name: 'resourcecustom',
+      isResource: true,
+      children: [
+        {
+          label: 'New',
+          name: 'new'
+        }
+      ]
     },
   ];
 
