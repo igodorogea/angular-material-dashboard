@@ -1,3 +1,9 @@
 <dashboard-layout layout-fill layout="row">
     <dl-logo><h2>MUUME AG</h2></dl-logo>
+    <dl-content>
+        <h2>States</h2>
+        <pre>{{main.states | json}}</pre>
+        <h2>Nodes</h2>
+        <pre>{{main.nodes | json}}</pre>
+    </dl-content>
 </dashboard-layout>

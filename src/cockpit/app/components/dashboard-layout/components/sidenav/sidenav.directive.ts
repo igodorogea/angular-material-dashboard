@@ -43,7 +43,7 @@ export class SidenavController {
   public states: INode[];
 
   constructor(DlSidenavService: IDlSidenavService, $state: angular.ui.IStateService) {
-    this.states = DlSidenavService.getNodes();
+    this.states = DlSidenavService.getHMenuNodes();
     console.log($state.get());
   }
 }

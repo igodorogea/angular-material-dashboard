@@ -5,6 +5,7 @@ import { dashboardLayout } from './dashboard-layout.directive';
 import { dlHeader } from './components/header/header.directive';
 import { dlSidenav, dlSidenavMenu } from './components/sidenav/sidenav.directive';
 import { DlSidenavService } from './components/sidenav/sidenav.service';
+import { MyService } from './components/sidenav/my.service';
 
 module IgDashboard {
   'use strict';
@@ -26,6 +27,7 @@ module IgDashboard {
     .directive('dlSidenav', dlSidenav)
     .directive('dlSidenavMenu', dlSidenavMenu)
     .provider('DlSidenavService', DlSidenavService)
+    .provider('MyService', MyService)
     .config(config)
   ;
 }

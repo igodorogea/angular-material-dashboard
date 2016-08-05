@@ -11,11 +11,11 @@ var pathSrcHtml = [
 ];
 
 var pathSrcJs = [
-  path.join(conf.paths.tmp, '/serve/app/index.module.js')
+  path.join(conf.paths.tmp, '/serve/cockpit/app/index.module.js')
 ];
 
 function runTests (singleRun, done) {
-  var reporters = ['progress'];
+  var reporters = ['spec'];
   var preprocessors = {};
 
   pathSrcHtml.forEach(function(path) {
@@ -39,7 +39,7 @@ function runTests (singleRun, done) {
 
   var server = new karma.Server(localConfig, function(failCount) {
     done(failCount ? new Error("Failed " + failCount + " tests.") : null);
-  })
+  });
   server.start();
 }
 

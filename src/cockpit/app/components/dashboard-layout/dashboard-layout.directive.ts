@@ -6,7 +6,8 @@ export function dashboardLayout(): angular.IDirective {
     transclude: {
       'logo': 'dlLogo',
       'sidenav': '?dlSideMenu',
-      'header': '?dlHeaderBar'
+      'header': '?dlHeaderBar',
+      'content': '?dlContent'
     },
     template: `
         <md-sidenav
@@ -31,6 +32,7 @@ export function dashboardLayout(): angular.IDirective {
             <md-content md-scroll-y layout="column" flex>
                 <div layout-padding flex="noshrink">
                     <div ui-view=""></div>
+                    <div ng-transclude="content"></div>
                 </div>
             </md-content>
         </div>
