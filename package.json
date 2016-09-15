@@ -1,6 +1,14 @@
 {
-  "name": "muume-cockpit-material",
+  "name": "angular-material-dashboard",
   "version": "1.0.0",
+  "description": "Admin template based on AngularJS and Angular Material",
+  "author": "Ivan Godorogea",
+  "homepage": "https://github.com/igodorogea/angular-material-dashboard",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igodorogea/angular-material-dashboard.git"
+  },
   "dependencies": {
     "connect-history-api-fallback": "^1.2.0"
   },
@@ -44,7 +52,7 @@
     "karma-phantomjs-shim": "~1.2.0",
     "karma-spec-reporter": "0.0.26",
     "lodash": "~3.10.1",
-    "main-bower-files": "~2.9.0",
+    "main-bower-files": "~2.13.0",
     "ng-annotate-loader": "0.0.10",
     "phantomjs": "~1.9.18",
     "ts-loader": "~0.8.0",
@@ -53,7 +61,7 @@
     "typings": "~0.7.9",
     "uglify-save-license": "~0.4.1",
     "webpack-stream": "~2.1.1",
-    "wiredep": "~2.2.2"
+    "wiredep": "~4.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
